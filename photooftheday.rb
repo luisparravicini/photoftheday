@@ -1,7 +1,8 @@
 require 'mechanize'
 require 'uri'
 
-first_url = 'http://photography.nationalgeographic.com/photography/photo-of-the-day/'
+# first online 'Photo of the day' (2009-01-01)
+first_url = 'http://photography.nationalgeographic.com/photography/photo-of-the-day/sailboats-durrance/'
 urls_path = 'photos_urls.txt'
 last_url_path = 'last_url.txt'
 
@@ -24,9 +25,9 @@ File.open(urls_path, 'a') do |io|
 
     File.open(last_url_path, 'w') { |io| io.puts current_url }
 
-    prev_link = doc.at('div.nav p.prev a')
-    current_url = unless prev_link.nil?
-      URI.join(current_url, prev_link['href']).to_s
+    next_link = doc.at('div.nav p:last a')
+    current_url = unless next_link.nil?
+      URI.join(current_url, next_link['href']).to_s
     end
   end
 end
