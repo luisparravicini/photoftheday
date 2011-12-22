@@ -8,6 +8,7 @@ last_url_path = 'last_url.txt'
 
 agent = Mechanize.new
 agent.user_agent_alias = 'Linux Firefox'
+agent.max_history = 1
 
 current_url = if File.exists?(last_url_path)
   File.open(last_url_path, 'r') { |io| io.readline.chomp }
