@@ -27,7 +27,10 @@ File.open(urls_path, 'a') do |io|
     File.open(last_url_path, 'w') { |io| io.puts current_url }
 
     next_link = doc.at('div.nav p:last a')
-    current_url = unless next_link.nil?
+    classes = next_link.parent['class']
+    classes = classes.split(/\s+/) unless classes.nil?
+    classes ||= []
+    current_url = unless next_link.nil? || classes.include?('prev')
       URI.join(current_url, next_link['href']).to_s
     end
   end
