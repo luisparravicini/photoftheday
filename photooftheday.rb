@@ -19,10 +19,15 @@ end
 File.open(urls_path, 'a') do |io|
   while !current_url.nil?
     doc = agent.get(current_url)
-    puts doc.at('p.publication_time').inner_text
+    msg = doc.at('p.publication_time').inner_text
 
     download_link = doc.at('div.download_link a')
-    io.puts URI.join(current_url, download_link['href']) unless download_link.nil?
+    unless download_link.nil?
+      io.puts URI.join(current_url, download_link['href'])
+      msg += ' (+)'
+    end
+
+    puts msg
 
     File.open(last_url_path, 'w') { |io| io.puts current_url }
 
