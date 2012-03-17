@@ -7,7 +7,8 @@ This script automates the task. It creates a list with all the urls for the avai
 
 The script can be interrupted and on the following run it resumes from the last date processed. If you don't want this, and want to start again from the first day available, remove *last_url.txt*.
 
-The photo's urls are stored in *photos_urls.txt*. With that list of urls you can then download them using *wget*:
+The photo's urls are stored in *photos_urls.txt*. With that list of urls you can then download them running *download.rb*:
 
-    wget -i photos_urls.txt
+    ruby download.rb <dir>
 
+Where *dir* is the directory where photos will be stored. Only new photos will be downloaded.
