@@ -18,12 +18,13 @@ File.open(urls_path) do |io|
     puts url
     tmp = Tempfile.new('wallpaper')
     begin
-      out = `wget "#{url}" -O "#{tmp.path}" 2>&1`
+      out = `wget -nv "#{url}" -O "#{tmp.path}" 2>&1`
       unless $?.success?
         puts out
-        raise "error downloading #{url} to #{dest_path}"
+        puts '-'*60
+      else
+        mv(tmp.path, dest_path)
       end
-      mv(tmp.path, dest_path)
     ensure
       tmp.unlink
     end
