@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+
+
 require 'mechanize'
 require 'uri'
 
