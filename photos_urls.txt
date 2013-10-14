@@ -1048,3 +1048,6 @@ http://images.nationalgeographic.com/wpf/media-live/photos/000/702/custom/70224_
 http://images.nationalgeographic.com/wpf/media-live/photos/000/702/custom/70220_1600x1200-wallpaper-cb1376421607.jpg
 http://images.nationalgeographic.com/wpf/media-live/photos/000/702/custom/70215_1600x1200-wallpaper-cb1376498729.jpg
 http://images.nationalgeographic.com/wpf/media-live/photos/000/702/custom/70222_1600x1200-wallpaper-cb1377533536.jpg
+http://images.nationalgeographic.com/wpf/media-live/photos/000/720/custom/72092_1600x1200-wallpaper-cb1380808931.jpg
+http://images.nationalgeographic.com/wpf/media-live/photos/000/721/custom/72101_1600x1200-wallpaper-cb1380906495.jpg
+http://images.nationalgeographic.com/wpf/media-live/photos/000/720/custom/72098_1600x1200-wallpaper-cb1380907291.jpg
